@@ -81,25 +81,25 @@ player1.sayHello("lily");
 /* 7 :object + function */
 const calculator = {
   plus: function (a, b) {
-    alert(a + b);
+    console.log(a + b);
   },
   minus: function (a, b) {
     if (a < b) {
-      alert(b - a);
+      console.log(b - a);
     } else {
-      alert(a - b);
+      console.log(a - b);
     }
   },
   divide: function (a, b) {
     if (a < b) {
-      alert("몫 : " + b / a, "나머지 : " + (b % a));
+      console.log("몫 : " + b / a, "나머지 : " + (b % a));
     } else {
-      alert("몫 : " + a / b, "나머지 : " + (a % b));
+      console.log("몫 : " + a / b, "나머지 : " + (a % b));
     }
   },
   // or root
   powerOf: function (a, b) {
-    alert(a ** b);
+    console.log(a ** b);
   },
 };
 calculator.plus(5, 10);
@@ -108,3 +108,53 @@ calculator.divide(5, 10);
 calculator.powerOf(5, 10);
 
 /* 8 : return */
+const calculator1 = {
+  plus: function (a, b) {
+    console.log("hi");
+    return a + b;
+    console.log("bye");
+  },
+  minus: function (a, b) {
+      return a - b;
+  },
+  time: function (a, b){
+    return a * b;
+  },
+  divide: function (a, b) {
+      return a / b
+  },
+  // or root
+  powerOf: function (a, b) {
+    return a ** b;
+  },
+};
+
+const plusResult = calculator1.plus(2, 5);
+const minusResult = calculator1.minus(plusResult, 5);
+const timeResult = calculator1.time(2, minusResult);
+const divideResult = calculator1.divide(timeResult, plusResult);
+const powerOfResult = calculator1.powerOf(divideResult, minusResult);
+
+console.log(plusResult);
+console.log(minusResult);
+console.log(timeResult);
+console.log(divideResult);
+console.log(powerOfResult);
+
+/* 9. 팝업창 문자열을 정수로 변환 */
+const age = parseInt(prompt("HOW OLD ARE YOU?"));
+console.log(age);
+
+// const age = prompt("how old are you?");
+// console.log(typeof age);
+if(isNaN(age) || age < 0) {
+  console.log(prompt("Please write a real positive number."));
+}else if (age < 19){
+  console.log(prompt("You are too young."));
+}else if (age >= 19 && age <= 50){
+  console.log(alert("You cad drink!"));
+}else if (age > 50 && age <= 80){
+  console.log(alert("You should be exercise."));
+}else if (age >80){
+  console.log(alert("You can do whatever you want."));
+};
