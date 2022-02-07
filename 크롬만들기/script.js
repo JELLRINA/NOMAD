@@ -115,13 +115,13 @@ const calculator1 = {
     console.log("bye");
   },
   minus: function (a, b) {
-      return a - b;
+    return a - b;
   },
-  time: function (a, b){
+  time: function (a, b) {
     return a * b;
   },
   divide: function (a, b) {
-      return a / b
+    return a / b;
   },
   // or root
   powerOf: function (a, b) {
@@ -147,14 +147,72 @@ console.log(age);
 
 // const age = prompt("how old are you?");
 // console.log(typeof age);
-if(isNaN(age) || age < 0) {
+if (isNaN(age) || age < 0) {
   console.log(prompt("Please write a real positive number."));
-}else if (age < 19){
+} else if (age < 19) {
   console.log(prompt("You are too young."));
-}else if (age >= 19 && age <= 50){
+} else if (age >= 19 && age <= 50) {
   console.log(alert("You cad drink!"));
-}else if (age > 50 && age <= 80){
+} else if (age > 50 && age <= 80) {
   console.log(alert("You should be exercise."));
-}else if (age >80){
+} else if (age > 80) {
   console.log(alert("You can do whatever you want."));
-};
+}
+
+/* 10 : js => html 접근 타이틀 변경*/
+document.title = " Hello JELLRINA!";
+
+/* 11: html in js  */
+// 엘리멘트 아이디 가져오기
+const title = document.getElementById("title");
+
+title.style.color = "red";
+
+console.dir(title);
+// title.innerText = "Got you!";
+console.log(title.id);
+console.log(title.className);
+
+/* 12 : searching for elements */
+/* const title1 = document.querySelector(".hello h2");
+const title2 = document.querySelectorAll(".hello h2");
+
+// 자주 사용하는 elements
+const title3 = document.querySelector("#title");
+const title4 = document.getElementById("title");
+
+console.log(title1);
+console.log(title2);
+console.log(title3);
+console.log(title4);
+ */
+
+/* 13:event */
+/* //1.클릭 하려는 곳
+const title5 = document.querySelector(".hello h2");
+//3.클릭시 색상 변경 및 문구 출력 함수
+function handleTitleClick(){
+  title5.style.color="blue";
+  // console.log("title was clicked!");
+}
+//2.클릭 이벤트 코드
+title5.addEventListener("click", handleTitleClick);
+ */
+const title6 = document.querySelector(".hello h2");
+
+console.dir(title6);
+
+function handleTitleClick() {
+  title6.style.color = "violet";
+}
+function handleMouseEnter() {
+  title6.innerText = "Mouse is here~";
+  // console.log("mouse is here~");
+}
+function handleMouseLeave() {
+  title6.innerText = "Mouse is gone!";
+}
+title6.addEventListener("click", handleTitleClick);
+title6.addEventListener("mouseenter", handleMouseEnter);
+title6.addEventListener("mouseleave", handleMouseLeave);
+
