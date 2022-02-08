@@ -198,17 +198,22 @@ function handleTitleClick(){
 //2.클릭 이벤트 코드
 title5.addEventListener("click", handleTitleClick);
  */
+
+/* 13: mouse event */
 const title6 = document.querySelector(".hello h2");
 
 console.dir(title6);
 
+//타이틀 클릭 시
 function handleTitleClick() {
   title6.style.color = "violet";
 }
+//마우스 갖다대기
 function handleMouseEnter() {
   title6.innerText = "Mouse is here~";
   // console.log("mouse is here~");
 }
+//마우스 떼기
 function handleMouseLeave() {
   title6.innerText = "Mouse is gone!";
 }
