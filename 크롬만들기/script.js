@@ -220,4 +220,39 @@ function handleMouseLeave() {
 title6.addEventListener("click", handleTitleClick);
 title6.addEventListener("mouseenter", handleMouseEnter);
 title6.addEventListener("mouseleave", handleMouseLeave);
+// == 아래와 같이 변경할 수 있지만 .removeEventListener을 사용하려면 위와 같이 쓰는걸 
+//title6.onclick = handleTitleClick;
+/* 14: window resize */
+function handleWindowResize(){
+  document.body.style.backgroundColor = "tomato"
+}
+//복사 함수 실행 시 복사 문구 뜨게하기
+function handleWindowCopy() {
+  alert("Copier!");
+}
+//wifi 온오프 함수
+function handleWindowOffline() {
+  alert("sorry Wi-Fi connection is required.")
+}
+function handleWindowOnline() {
+  alert("Wi-Fi is connected!");
+}
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
 
+/* 15: if else문 이용 */
+const h1 = document.querySelector(".hello h2");
+
+function handleTitleClick() {
+  const currentColor = h1.style.color;
+  let newColor;
+  if (currentColor == "blue") {
+    newColor = "tomato";
+  }else {
+    newColor = "blue";
+  }
+  h1.style.color = newColor;
+}
+h1.addEventListener("click", handleTitleClick);
