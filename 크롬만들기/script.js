@@ -220,11 +220,11 @@ function handleMouseLeave() {
 title6.addEventListener("click", handleTitleClick);
 title6.addEventListener("mouseenter", handleMouseEnter);
 title6.addEventListener("mouseleave", handleMouseLeave);
-// == 아래와 같이 변경할 수 있지만 .removeEventListener을 사용하려면 위와 같이 쓰는걸 
+// == 아래와 같이 변경할 수 있지만 .removeEventListener을 사용하려면 위와 같이 쓰는걸
 //title6.onclick = handleTitleClick;
 /* 14: window resize */
-function handleWindowResize(){
-  document.body.style.backgroundColor = "tomato"
+function handleWindowResize() {
+  document.body.style.backgroundColor = "tomato";
 }
 //복사 함수 실행 시 복사 문구 뜨게하기
 function handleWindowCopy() {
@@ -232,7 +232,7 @@ function handleWindowCopy() {
 }
 //wifi 온오프 함수
 function handleWindowOffline() {
-  alert("sorry Wi-Fi connection is required.")
+  alert("sorry Wi-Fi connection is required.");
 }
 function handleWindowOnline() {
   alert("Wi-Fi is connected!");
@@ -250,9 +250,36 @@ function handleTitleClick() {
   let newColor;
   if (currentColor == "blue") {
     newColor = "tomato";
-  }else {
+  } else {
     newColor = "blue";
   }
   h1.style.color = newColor;
 }
 h1.addEventListener("click", handleTitleClick);
+
+/* 16: css js 각 작성*/
+/* const h2 = document.querySelector(".hello h2");
+
+function handleTitleClick() {
+  const activeClass = "active";
+  if (h2.className === "activeClass") {
+    h2.className = "";
+  } else {
+    h2.className = "activeClass";
+  }
+}
+h2.addEventListener("click", handleTitleClick);
+ */
+/* 16-2 : 더 간단히 작성하기 */
+const h2 = document.querySelector(".hello h2");
+
+function handleTitleClick() {
+  /* const clickedClass = "active";
+  if(h2.classList.contains(clickedClass)) {
+    h2.classList.remove(clickedClass);
+  }else {
+    h2.classList.add(clickedClass);
+  } */
+  h2.classList.toggle("active");
+}
+h2.addEventListener("click", handleTitleClick);
