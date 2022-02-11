@@ -24,3 +24,16 @@ function onSigninSubmit(event) {
 }
 // signinButton.addEventListener("click", onSignBtnClick);
 signinForm.addEventListener("submit", onSigninSubmit);
+
+/* 3 */
+const link = document.querySelector("a");
+
+function onLinkClick(event) {
+    // prevnetDefault하기 전 알림창으로 막을 순 있지만 누르면 넘어간다.
+    alert("clicked!");
+    
+    event.preventDefault();
+    console.log(event);
+}
+
+link.addEventListener("click", onLinkClick);
