@@ -1,5 +1,8 @@
 @charset "utf-8";
 
 .hidden {
+    /* 설정해 놓은 위치도 없어진다. */
     display: none;
+    /* 위치는 그대로 두고 사라진다 */
+    /* visibility: hidden; */
 }
