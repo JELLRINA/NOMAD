@@ -20,7 +20,9 @@ function onSigninSubmit(event) {
     // const username = signinInput.value;
     // console.log(username);
     event.preventDefault();
-    console.log(event);
+    const username = signinInput.value;
+    signinForm.classList.add("hidden");
+    console.log(username);
 }
 // signinButton.addEventListener("click", onSignBtnClick);
 signinForm.addEventListener("submit", onSigninSubmit);
@@ -33,10 +35,7 @@ function onLinkClick(event) {
     // alert("clicked!");
     
     event.preventDefault();
-    // console.log(event);
-    const username = signinInput.value;
-    signinForm.classList.add("hidden");
-    console.log(username);
+    console.log(event);
 }
 
 link.addEventListener("click", onLinkClick);
