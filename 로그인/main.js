@@ -30,10 +30,13 @@ const link = document.querySelector("a");
 
 function onLinkClick(event) {
     // prevnetDefault하기 전 알림창으로 막을 순 있지만 누르면 넘어간다.
-    alert("clicked!");
+    // alert("clicked!");
     
     event.preventDefault();
-    console.log(event);
+    // console.log(event);
+    const username = signinInput.value;
+    signinForm.classList.add("hidden");
+    console.log(username);
 }
 
 link.addEventListener("click", onLinkClick);
